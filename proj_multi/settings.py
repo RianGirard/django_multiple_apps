@@ -14,7 +14,7 @@ import os
 import environ                          # lines 14-19 take the SECRET_KEY value out of settings.py and put into the .env folder that is hidden in .gitignore.txt
 env = environ.Env(                      # requires [pip install django-environ]
     DEBUG=(bool, False)                 # .env file must go inside Project Folder > Project Folder 
-)                                       # .gitignore.txt goes inside Project Folder and contains .env 
+)                                       # .gitignore goes inside Project Folder and contains .env 
 environ.Env.read_env()                  # more details: https://github.com/joke2k/django-environ
 SECRET_KEY = env('SECRET_KEY')
 
